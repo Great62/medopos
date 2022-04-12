@@ -14,10 +14,6 @@ import PitchImage from "../Components/PitchImage";
 function LandingPage() {
   return (
     <div>
-      <div className="block1">
-        <h1 className="brand-title">Compass Elective</h1>
-        <NavBar />
-      </div>
       <div className="block2">
         <Pitch />
         <SearchBar />
