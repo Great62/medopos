@@ -5,13 +5,16 @@
     width: 95%;
     border-radius: 20px;
     border: solid 1px rgb(202, 202, 202);
+    max-width: 520px;
 }
 
 .NHS-waiting-list {
     height: 50%;
     width: 95%;
+    max-width: 520px;
     border-radius: 20px;
     border: solid 1px rgb(202, 202, 202);
+    padding-bottom: 20px;
 }
 
 .list-title {

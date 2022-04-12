@@ -1,4 +1,5 @@
 import React from "react";
+import "../Styles/searchBar.css";
 import "../Styles/Pitch.css";
 
 function Pitch() {
