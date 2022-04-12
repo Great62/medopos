@@ -1,20 +1,31 @@
+.health-list-container {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    gap: 10%;
+}
+
+.reference-pic {
+    width: 350px;
+    height: 350px;
+}
+
 .common-cases-container {
-    margin-top: 100px;
     margin-bottom: 100px;
-    height: 50%;
+    height: 100%;
     width: 95%;
+    max-width: 520px;
     border-radius: 20px;
     border: solid 1px rgb(202, 202, 202);
-    max-width: 520px;
+    
 }
 
 .NHS-waiting-list {
-    height: 50%;
+    height: 100%;
     width: 95%;
     max-width: 520px;
     border-radius: 20px;
     border: solid 1px rgb(202, 202, 202);
-    padding-bottom: 20px;
 }
 
 .list-title {
@@ -22,7 +33,7 @@
 }
 
 .health-list {
-    max-height: 350px;
+    max-height: 320px;
     flex-wrap: wrap;
     gap: 5px;
     display: flex;
@@ -34,37 +45,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     height: 35px;
     width: 200px;
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(0, 146, 151) 1px;
     font-weight: 700;
 }
 .health-list-item-nhs {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     height: 35px;
     width: 320px;
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(197, 0, 0) 1px;
     font-weight: 700;
 }
 
-.gradient-wrap-border-blue {
-    display: flex;
-    align-items: center;
-    border-radius: 25px;
-    position: relative;
-    background: linear-gradient(to right, rgb(0, 153, 255), rgb(59, 216, 255));
-    padding: 0.1em;
-}
-.gradient-wrap-border-red {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    position: relative;
-    background: linear-gradient(to right, rgb(255, 82, 82), rgb(255, 27, 10));
-    padding: 0.08em;
+
+@media (min-width: 1000px) {
+    .health-list-container {
+        display: flex;
+        justify-content: center;
+        height: 600px;
+        gap: 20%;
+    }
 }

@@ -3,6 +3,7 @@
 .Bottom-CTA-Container {
   position: absolute;
   width: 70%;
+  max-width: 1050px;
   border-radius: 20px;
   height: 90%;
   display: flex;
@@ -32,15 +33,16 @@
 
 .Bottom-CTA-Form-Container {
   width: 90%;
-  height: 70%;
+  height: 40%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .CTA-Form-Block {
   text-align: center;
   display: flex;
-  gap: 5%;
+  gap: 2%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -50,7 +52,6 @@
   width: 100%;
   max-width: 400px;
   font-family: "Poppins", sans-serif;
-  color: #fff;
   margin: 2px;
   padding: 10px;
   border-radius: 15px;
@@ -65,9 +66,8 @@
 }
 
 .Big-InputBox {
-  height: 80%;
+  height: 75%;
   resize: none;
-  color: #fff;
   margin: 2px;
   padding: 10px;
   border-radius: 15px;
@@ -100,22 +100,17 @@
 }
 
 @media (min-width: 1500px) {
-  .Bottom-CTA-Container {
-    height: 20%;
-  }
   .CTA-Form-Block {
-    gap: 5%;
-  }
-  .Big-InputBox {
-    height: 80%;
+    gap: 2%;
   }
 }
 
 @media (max-width: 900px) {
   .Bottom-CTA-Form-Container {
+    height: 70%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0px;
   }
   .CTA-Form-Block {
     height: 50%;

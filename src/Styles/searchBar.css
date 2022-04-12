@@ -38,9 +38,7 @@
     height: 80%;
     background-color: aliceblue;
 }
-.search-bar-input:focus {
-    color: rgb(255, 255, 255);
-}
+
 .pitch-text-explain {
     color: rgb(51, 51, 51);
     font-weight: 500;
