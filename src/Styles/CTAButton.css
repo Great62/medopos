@@ -1,0 +1,33 @@
+.CTA-button-container {
+    position: relative;
+    height: 10%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.svg-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 220px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: rgb(64, 166, 255);
+    transition: all 300ms;
+}
+.svg-button:hover {
+    background-color: rgb(116, 190, 255);
+}
+
+.svg-heart {
+    position: absolute;
+    width: auto;
+    height: 200px;
+}
+.svg-heart:hover {
+    cursor: pointer;
+}

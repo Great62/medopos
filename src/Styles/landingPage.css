@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+.block1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    transition: all 300ms;
+}
+
+.block2 {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+}
+
+.block3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 150vh;
+}
+
+.block4 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 75vh;
+    background-color: rgb(240, 240, 240);
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(32, 32, 32);
+}
+
+.brand-title {
+    font-size: 1.3rem;
+}
