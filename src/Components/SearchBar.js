@@ -33,7 +33,7 @@ function SearchBar() {
     <div className="service-search-container">
       <div
         className={`search-bar ${
-          filteredData.length != 0 && "search-bar-active"
+          filteredData.length !== 0 && "search-bar-active"
         } `}
       >
         {wordEntered ? (
@@ -53,7 +53,7 @@ function SearchBar() {
           value={wordEntered}
           onChange={handleFilter}
         ></input>
-        {filteredData.length != 0 && (
+        {filteredData.length !== 0 && (
           <div className="data-search-result">
             {filteredData.slice(0, 15).map((value, key) => {
               return (

@@ -15,6 +15,7 @@ import ExplanationSteps from "../Components/ExplanationSteps";
 function LandingPage() {
   return (
     <div>
+      <NavBar />
       <div className="block2">
         <Pitch />
         <SearchBar />
