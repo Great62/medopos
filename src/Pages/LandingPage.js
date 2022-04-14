@@ -10,6 +10,7 @@ import CommonCases from "../Components/CommonCases";
 import NHSWaitingList from "../Components/NHSWaitingList";
 import CallToActionBottom from "../Components/CallToActionBottom";
 import PitchImage from "../Components/PitchImage";
+import ExplanationSteps from "../Components/ExplanationSteps";
 
 function LandingPage() {
   return (
@@ -20,6 +21,10 @@ function LandingPage() {
         <PitchImage />
         <CTAButton />
       </div>
+      <div className="block-explanation">
+        <ExplanationSteps />
+      </div>
+      <h2 className="stats-title">Health situation as of mid September 2021</h2>
       <div className="block3">
         <NHSWaitingList />
         <CommonCases />

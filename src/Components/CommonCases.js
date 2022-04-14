@@ -5,7 +5,7 @@ import operation from "../Pictures/chirurgie-robotique.png";
 
 function CommonCases() {
   return (
-    <div className="health-list-container">
+    <div className="health-list-container border-left">
       <div className="common-cases-container">
         <h3 className="list-title">Common cases</h3>
         <div className="health-list">

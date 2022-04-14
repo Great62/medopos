@@ -22,6 +22,19 @@
     min-height: 600px;
 }
 
+.block-explanation {
+    height: 125em;
+}
+
+.stats-title {
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(0, 255, 200), rgb(46, 171, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .block3 {
     position: relative;
     display: flex;
@@ -61,5 +74,9 @@
         justify-content: center;
         align-items: center;
         height: 700px;
+        gap: 0px;
+    }
+    .block-explanation {
+        height: 80em;
     }
 }

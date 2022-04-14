@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/searchBar.css";
 import "../Styles/Pitch.css";
+import flight from "../Pictures/Flying around the world-pana.svg";
 
 function Pitch() {
   return (
@@ -14,6 +15,7 @@ function Pitch() {
           physicians without delay and at surprisingly reasonable cost.
         </h4>
       </div>
+      <img src={flight} alt="" className="pitch-image-desktop" />
     </div>
   );
 }
