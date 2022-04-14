@@ -1,4 +1,5 @@
 .navBar-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +22,10 @@
     width: 3.5em;
     height: 3.5em;
     z-index: 12;
+    transition: all 300ms;
 }
 .hamburger-container:hover {
+    background-color: rgb(56, 56, 56);
     cursor: pointer;
 }
 
@@ -38,6 +41,10 @@
     height: 3.5em;
     width: 15em;
     z-index: 8;
+    transition: all 300ms;
+}
+.phone-number-container:hover {
+    background-color: rgb(241, 241, 241);
 }
 
 .phone-icon {
@@ -107,5 +114,17 @@
     .nav {
         visibility: visible;
         position: relative;
+    }
+}
+
+@media (max-width: 420px) {
+    .navBar-container {
+        justify-content: flex-end;
+    }
+    .phone-number-container {
+        margin-right: .5em;
+    }
+    .hamburger-container {
+        left: 10px;
     }
 }
