@@ -3,13 +3,21 @@ import "../Styles/navBar.css";
 import { motion, AnimatePresence } from "framer-motion";
 import phone from "../Pictures/call_black_24dp.svg";
 import menu from "../Pictures/menu_white_24dp.svg";
+import close from "../Pictures/close_white_24dp.svg";
 
 function NavBar() {
   const [scrollLevel, setScrollLevel] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
+  var updateRate = 0;
+  var previouslyUpdated = 0;
 
   window.addEventListener("scroll", (event) => {
-    setScrollLevel(window.scrollY);
+    updateRate++;
+    if (updateRate - 5 === previouslyUpdated) {
+      previouslyUpdated += 5;
+      setScrollLevel(window.scrollY);
+      console.log("etst");
+    }
   });
 
   return (
@@ -28,13 +36,17 @@ function NavBar() {
               className="hamburger-container"
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              <img src={menu} alt="" className="phone-icon" />
+              {menuOpen ? (
+                <img src={close} alt="" className="phone-icon" />
+              ) : (
+                <img src={menu} alt="" className="phone-icon" />
+              )}
             </motion.div>
             <AnimatePresence>
-              {menuOpen == false && (
+              {menuOpen === false && (
                 <motion.div
                   className="phone-number-container"
-                  transition={{ type: "ease-in-out", duration: 0.6 }}
+                  transition={{ type: "ease-in-out" }}
                   initial={{ top: "-100px" }}
                   animate={{ top: "0px" }}
                   exit={{ top: "-100px" }}
