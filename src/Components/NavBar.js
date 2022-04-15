@@ -6,6 +6,11 @@ import menu from "../Pictures/menu_white_24dp.svg";
 import close from "../Pictures/close_white_24dp.svg";
 
 function NavBar() {
+  //path related
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  console.log(currentPath);
+
+  //nav-menu related
   const [scrollLevel, setScrollLevel] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   var updateRate = 0;
@@ -13,8 +18,8 @@ function NavBar() {
 
   window.addEventListener("scroll", (event) => {
     updateRate++;
-    if (updateRate - 25 === previouslyUpdated || window.scrollY < 10) {
-      previouslyUpdated += 25;
+    if (updateRate - 20 === previouslyUpdated || window.scrollY < 10) {
+      previouslyUpdated += 20;
       setScrollLevel(window.scrollY);
       console.log("etst");
       console.log(window.scrollY);
@@ -24,7 +29,7 @@ function NavBar() {
   return (
     <div className="fixed">
       <AnimatePresence>
-        {scrollLevel > 30 || menuOpen ? (
+        {scrollLevel > 30 || menuOpen || currentPath !== "/" ? (
           <motion.div
             className="navBar-container"
             transition={{ type: "ease-in-out" }}
@@ -33,7 +38,7 @@ function NavBar() {
             exit={{ top: "-100px" }}
           >
             <motion.div
-              whileTap={{ scale: 0.9 }}
+              whileTap={{ scale: 0.8 }}
               className="hamburger-container"
               onClick={() => setMenuOpen(!menuOpen)}
             >
@@ -53,11 +58,62 @@ function NavBar() {
                   exit={{ top: "-100px" }}
                 >
                   <img src={phone} alt="" className="phone-icon" />
-                  <div className="phone-number">+33 7 68 19 56 41</div>
+                  <div className="phone-number">+44 207 582 7423</div>
                 </motion.div>
               )}
             </AnimatePresence>
-            <div className="nav"></div>
+            <div className="nav">
+              <div
+                className={`nav-item-desktop ${
+                  currentPath === "/" && "nav-item-desktop-active"
+                } `}
+                onClick={() => {
+                  window.location.href = "/";
+                }}
+              >
+                Home
+              </div>
+              <div
+                className={`nav-item-desktop ${
+                  currentPath === "/UsAndYou" && "nav-item-desktop-active"
+                } `}
+                onClick={() => {
+                  window.location.href = "/UsAndYou";
+                }}
+              >
+                Us and you
+              </div>
+              <div
+                className={`nav-item-desktop ${
+                  currentPath === "/FAQs" && "nav-item-desktop-active"
+                } `}
+                onClick={() => {
+                  window.location.href = "/FAQs";
+                }}
+              >
+                FAQs
+              </div>
+              <div
+                className={`nav-item-desktop ${
+                  currentPath === "/GoingPrivate" && "nav-item-desktop-active"
+                } `}
+                onClick={() => {
+                  window.location.href = "/GoingPrivate";
+                }}
+              >
+                Going private
+              </div>
+              <div
+                className={`nav-item-desktop ${
+                  currentPath === "/Legals" && "nav-item-desktop-active"
+                } `}
+                onClick={() => {
+                  window.location.href = "/Legals";
+                }}
+              >
+                Legals
+              </div>
+            </div>
           </motion.div>
         ) : null}
       </AnimatePresence>
@@ -72,11 +128,46 @@ function NavBar() {
           >
             <h1 className="menu-title">Medopos</h1>
             <div className="menu-nav">
-              <div className="nav-item">Home</div>
-              <div className="nav-item">Us and you</div>
-              <div className="nav-item">FAQs</div>
-              <div className="nav-item">Going private</div>
-              <div className="nav-item">Legals</div>
+              <div
+                className="nav-item"
+                onClick={() => {
+                  window.location.href = "/";
+                }}
+              >
+                Home
+              </div>
+              <div
+                className="nav-item"
+                onClick={() => {
+                  window.location.href = "/UsAndYou";
+                }}
+              >
+                Us and you
+              </div>
+              <div
+                className="nav-item"
+                onClick={() => {
+                  window.location.href = "/FAQs";
+                }}
+              >
+                FAQs
+              </div>
+              <div
+                className="nav-item"
+                onClick={() => {
+                  window.location.href = "/GoingPrivate";
+                }}
+              >
+                Going private
+              </div>
+              <div
+                className="nav-item"
+                onClick={() => {
+                  window.location.href = "/Legals";
+                }}
+              >
+                Legals
+              </div>
             </div>
           </motion.div>
         )}

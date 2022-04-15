@@ -11,6 +11,7 @@ import NHSWaitingList from "../Components/NHSWaitingList";
 import CallToActionBottom from "../Components/CallToActionBottom";
 import PitchImage from "../Components/PitchImage";
 import ExplanationSteps from "../Components/ExplanationSteps";
+import Footer from "../Components/Footer";
 
 function LandingPage() {
   return (
@@ -33,7 +34,7 @@ function LandingPage() {
       <div className="block4">
         <CallToActionBottom />
       </div>
-      <div className="footer"></div>
+      <Footer />
     </div>
   );
 }
