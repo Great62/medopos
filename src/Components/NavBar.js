@@ -13,10 +13,11 @@ function NavBar() {
 
   window.addEventListener("scroll", (event) => {
     updateRate++;
-    if (updateRate - 3 === previouslyUpdated) {
-      previouslyUpdated += 3;
+    if (updateRate - 25 === previouslyUpdated || window.scrollY < 10) {
+      previouslyUpdated += 25;
       setScrollLevel(window.scrollY);
       console.log("etst");
+      console.log(window.scrollY);
     }
   });
 
