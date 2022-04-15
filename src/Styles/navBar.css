@@ -87,13 +87,13 @@
 .nav-item-desktop:hover {
     cursor: pointer;
     box-shadow:  1px 1px 10px 1px rgba(255, 255, 255, 0.527);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(199, 224, 255);
 }
 
 .nav-item-desktop-active {
     cursor: pointer;
     box-shadow:  1px 1px 10px 1px rgba(255, 255, 255, 0.527);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(194, 228, 255);
 }
 
 .mobile-menu-container {
