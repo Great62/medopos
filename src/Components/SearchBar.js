@@ -49,7 +49,7 @@ function SearchBar() {
         <input
           type="text"
           className="search-bar-input"
-          placeholder="Search our services..."
+          placeholder="Browse our services"
           value={wordEntered}
           onChange={handleFilter}
         ></input>

@@ -55,7 +55,7 @@ function NavBar() {
                   transition={{ type: "ease-in-out" }}
                   initial={{ top: "-100px" }}
                   animate={{ top: "0px" }}
-                  exit={{ top: "-100px" }}
+                  exit={{ top: "-200px" }}
                 >
                   <img src={phone} alt="" className="phone-icon" />
                   <div className="phone-number">+44 207 582 7423</div>
@@ -129,7 +129,9 @@ function NavBar() {
             <h1 className="menu-title">Medopos</h1>
             <div className="menu-nav">
               <div
-                className="nav-item"
+                className={`nav-item ${
+                  currentPath === "/" && "nav-item-active"
+                } `}
                 onClick={() => {
                   window.location.href = "/";
                 }}
@@ -137,7 +139,9 @@ function NavBar() {
                 Home
               </div>
               <div
-                className="nav-item"
+                className={`nav-item ${
+                  currentPath === "/UsAndYou" && "nav-item-active"
+                } `}
                 onClick={() => {
                   window.location.href = "/UsAndYou";
                 }}
@@ -145,7 +149,9 @@ function NavBar() {
                 Us and you
               </div>
               <div
-                className="nav-item"
+                className={`nav-item ${
+                  currentPath === "/FAQs" && "nav-item-active"
+                } `}
                 onClick={() => {
                   window.location.href = "/FAQs";
                 }}
@@ -153,7 +159,9 @@ function NavBar() {
                 FAQs
               </div>
               <div
-                className="nav-item"
+                className={`nav-item ${
+                  currentPath === "/GoingPrivate" && "nav-item-active"
+                } `}
                 onClick={() => {
                   window.location.href = "/GoingPrivate";
                 }}
@@ -161,7 +169,9 @@ function NavBar() {
                 Going private
               </div>
               <div
-                className="nav-item"
+                className={`nav-item ${
+                  currentPath === "/Legals" && "nav-item-active"
+                } `}
                 onClick={() => {
                   window.location.href = "/Legals";
                 }}

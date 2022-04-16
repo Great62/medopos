@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/landingPage.css";
+import { Link } from "react-scroll";
 
 //Component imports
 import CTAButton from "../Components/CTAButton";
@@ -21,7 +22,9 @@ function LandingPage() {
         <Pitch />
         <SearchBar />
         <PitchImage />
-        <CTAButton />
+        <Link to="cta" smooth={true}>
+          <CTAButton />
+        </Link>
       </div>
       <div className="block-explanation">
         <ExplanationSteps />
@@ -31,7 +34,7 @@ function LandingPage() {
         <NHSWaitingList />
         <CommonCases />
       </div>
-      <div className="block4">
+      <div className="block4" id="cta">
         <CallToActionBottom />
       </div>
       <Footer />
