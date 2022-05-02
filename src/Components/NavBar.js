@@ -70,16 +70,14 @@ function NavBar() {
             >
               Home
             </a>
-            <div
+            <a
               className={`nav-item-desktop ${
                 currentPath === "/UsAndYou" && "nav-item-desktop-active"
               } `}
-              onClick={() => {
-                window.location.href = "/UsAndYou";
-              }}
+              href="/UsAndYou"
             >
               Us and you
-            </div>
+            </a>
             <div
               className={`nav-item-desktop ${
                 currentPath === "/FAQs" && "nav-item-desktop-active"
