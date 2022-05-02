@@ -32,9 +32,6 @@ function NavBar() {
         <motion.div
           className="navBar-container"
           transition={{ type: "ease-in-out" }}
-          initial={{ top: "-100px" }}
-          animate={{ top: "0px" }}
-          exit={{ top: "-100px" }}
         >
           <motion.div
             whileTap={{ scale: 0.8 }}
