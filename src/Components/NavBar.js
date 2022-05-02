@@ -29,93 +29,91 @@ function NavBar() {
   return (
     <div className="fixed">
       <AnimatePresence>
-        {scrollLevel > 30 || menuOpen || currentPath !== "/" ? (
+        <motion.div
+          className="navBar-container"
+          transition={{ type: "ease-in-out" }}
+          initial={{ top: "-100px" }}
+          animate={{ top: "0px" }}
+          exit={{ top: "-100px" }}
+        >
           <motion.div
-            className="navBar-container"
-            transition={{ type: "ease-in-out" }}
-            initial={{ top: "-100px" }}
-            animate={{ top: "0px" }}
-            exit={{ top: "-100px" }}
+            whileTap={{ scale: 0.8 }}
+            className="hamburger-container"
+            onClick={() => setMenuOpen(!menuOpen)}
           >
-            <motion.div
-              whileTap={{ scale: 0.8 }}
-              className="hamburger-container"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              {menuOpen ? (
-                <img src={close} alt="" className="phone-icon" />
-              ) : (
-                <img src={menu} alt="" className="phone-icon" />
-              )}
-            </motion.div>
-            <AnimatePresence>
-              {menuOpen === false && (
-                <motion.div
-                  className="phone-number-container"
-                  transition={{ type: "ease-in-out" }}
-                  initial={{ top: "-100px" }}
-                  animate={{ top: "0px" }}
-                  exit={{ top: "-200px" }}
-                >
-                  <img src={phone} alt="" className="phone-icon" />
-                  <div className="phone-number">+44 207 582 7423</div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-            <div className="nav">
-              <div
-                className={`nav-item-desktop ${
-                  currentPath === "/" && "nav-item-desktop-active"
-                } `}
-                onClick={() => {
-                  window.location.href = "/";
-                }}
-              >
-                Home
-              </div>
-              <div
-                className={`nav-item-desktop ${
-                  currentPath === "/UsAndYou" && "nav-item-desktop-active"
-                } `}
-                onClick={() => {
-                  window.location.href = "/UsAndYou";
-                }}
-              >
-                Us and you
-              </div>
-              <div
-                className={`nav-item-desktop ${
-                  currentPath === "/FAQs" && "nav-item-desktop-active"
-                } `}
-                onClick={() => {
-                  window.location.href = "/FAQs";
-                }}
-              >
-                FAQs
-              </div>
-              <div
-                className={`nav-item-desktop ${
-                  currentPath === "/GoingPrivate" && "nav-item-desktop-active"
-                } `}
-                onClick={() => {
-                  window.location.href = "/GoingPrivate";
-                }}
-              >
-                Going private
-              </div>
-              <div
-                className={`nav-item-desktop ${
-                  currentPath === "/Legals" && "nav-item-desktop-active"
-                } `}
-                onClick={() => {
-                  window.location.href = "/Legals";
-                }}
-              >
-                Legals
-              </div>
-            </div>
+            {menuOpen ? (
+              <img src={close} alt="" className="phone-icon" />
+            ) : (
+              <img src={menu} alt="" className="phone-icon" />
+            )}
           </motion.div>
-        ) : null}
+          <AnimatePresence>
+            {menuOpen === false && (
+              <motion.div
+                className="phone-number-container"
+                transition={{ type: "ease-in-out" }}
+                initial={{ top: "-100px" }}
+                animate={{ top: "0px" }}
+                exit={{ top: "-200px" }}
+              >
+                <img src={phone} alt="" className="phone-icon" />
+                <div className="phone-number">+44 207 582 7423</div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <div className="nav">
+            <div
+              className={`nav-item-desktop ${
+                currentPath === "/" && "nav-item-desktop-active"
+              } `}
+              onClick={() => {
+                window.location.href = "/";
+              }}
+            >
+              Home
+            </div>
+            <div
+              className={`nav-item-desktop ${
+                currentPath === "/UsAndYou" && "nav-item-desktop-active"
+              } `}
+              onClick={() => {
+                window.location.href = "/UsAndYou";
+              }}
+            >
+              Us and you
+            </div>
+            <div
+              className={`nav-item-desktop ${
+                currentPath === "/FAQs" && "nav-item-desktop-active"
+              } `}
+              onClick={() => {
+                window.location.href = "/FAQs";
+              }}
+            >
+              FAQs
+            </div>
+            <div
+              className={`nav-item-desktop ${
+                currentPath === "/GoingPrivate" && "nav-item-desktop-active"
+              } `}
+              onClick={() => {
+                window.location.href = "/GoingPrivate";
+              }}
+            >
+              Going private
+            </div>
+            <div
+              className={`nav-item-desktop ${
+                currentPath === "/Legals" && "nav-item-desktop-active"
+              } `}
+              onClick={() => {
+                window.location.href = "/Legals";
+              }}
+            >
+              Legals
+            </div>
+          </div>
+        </motion.div>
       </AnimatePresence>
       <AnimatePresence>
         {menuOpen && (
