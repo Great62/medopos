@@ -62,16 +62,14 @@ function NavBar() {
             )}
           </AnimatePresence>
           <div className="nav">
-            <div
+            <a
               className={`nav-item-desktop ${
                 currentPath === "/" && "nav-item-desktop-active"
               } `}
-              onClick={() => {
-                window.location.href = "/";
-              }}
+              href="/"
             >
               Home
-            </div>
+            </a>
             <div
               className={`nav-item-desktop ${
                 currentPath === "/UsAndYou" && "nav-item-desktop-active"
