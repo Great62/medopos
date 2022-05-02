@@ -22,9 +22,7 @@ function LandingPage() {
         <Pitch />
         <SearchBar />
         <PitchImage />
-        <Link to="cta" smooth={true}>
-          <CTAButton />
-        </Link>
+        <CTAButton />
       </div>
       <div className="block-explanation">
         <ExplanationSteps />
