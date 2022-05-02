@@ -1,0 +1,22 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>https://medopos.vercel.app/</loc>
+        <lastmod>2022-05-02T07:26:12+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://medopos.vercel.app/UsAndYou</loc>
+        <lastmod>2022-05-02T07:26:12+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://medopos.vercel.app/FAQs</loc>
+        <lastmod>2022-05-02T07:26:12+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://medopos.vercel.app/GoingPrivate</loc>
+        <lastmod>2022-05-02T07:26:12+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://medopos.vercel.app/Legals</loc>
+        <lastmod>2022-05-02T07:26:12+00:00</lastmod>
+    </url>
+</urlset>
