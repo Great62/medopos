@@ -66,7 +66,7 @@ function NavBar() {
               className={`nav-item-desktop ${
                 currentPath === "/" && "nav-item-desktop-active"
               } `}
-              href="/"
+              href="https://medopos.vercel.app/"
             >
               Home
             </a>
